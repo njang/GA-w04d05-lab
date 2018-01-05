@@ -1,0 +1,11 @@
+<% include ../partials/boilerplate %>
+<div class='quotes'>
+  <% quotes.forEach(function(quote) { %>
+    <div class='my-quote'>
+      <h3><%= quote.quote %></h3>
+      <span class='author'><%= quote.author %></span>
+      <span class='genre'><%= quote.genre %></span>
+    </div>
+  <% }) %>
+</div>
+<% include ../partials/end %>

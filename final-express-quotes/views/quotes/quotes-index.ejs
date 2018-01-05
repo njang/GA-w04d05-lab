@@ -1,0 +1,18 @@
+<% include ../partials/boilerplate %>
+
+<a href='/quotes/add'>Add a quote!</a>
+
+<div class='quotes'>
+  <% quotesData.forEach(function(quote, index) { %>
+    <div class='my-quote'>
+      <h3><%=quote.quote%></h3>
+      <div class='meta'>
+        <span class='author'><%=quote.author%></span>
+        <span class='genre'><%=quote.genre.toUpperCase()%></span>
+      </div>
+      <a href='/quotes/<%= index %>'>Go to page</a>
+    </div>
+  <% }) %>
+</div>
+  
+<% include ../partials/end %>
